@@ -103,7 +103,7 @@ spec:
     spec:
       containers:
       - name: wordle-app
-        image: xavierh/react-wordle:latest
+        image: siddharth67/solar-system:v6
         ports:
         - containerPort: 3100
 
