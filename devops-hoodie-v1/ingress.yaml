@@ -8,7 +8,7 @@ metadata:
 spec:
   defaultBackend:
     service:
-      name: wordle-service
+      name: frontend-service
       port:
         number: 80
   rules:
