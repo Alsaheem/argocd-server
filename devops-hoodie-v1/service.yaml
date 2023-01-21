@@ -45,17 +45,3 @@ spec:
     targetPort:  3000
 
 ---
-
-kind: Service
-apiVersion: v1
-metadata:
-  name:  wordle-service
-spec:
-  selector:
-    app:  wordle-app
-  type:  NodePort
-  ports:
-  - name:  http
-    protocol: TCP
-    port:  80
-    targetPort:  3100

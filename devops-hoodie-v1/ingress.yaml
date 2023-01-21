@@ -14,15 +14,6 @@ spec:
   rules:
   - http:
       paths:
-      - path: /wordle(/|$)(.*)
-        pathType: Prefix
-        backend:
-          service:
-            name: wordle-service
-            port:
-              number: 80
-  - http:
-      paths:
       - path: /backend/v1(/|$)(.*)
         pathType: Prefix
         backend:
