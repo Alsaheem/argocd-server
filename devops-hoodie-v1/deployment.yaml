@@ -115,7 +115,7 @@ spec:
     spec:
       containers:
       - name: solar-app
-        image: siddhart67/solar-system:v6
+        image: siddharth67/solar-system:v6
         imagePullPolicy: Always
         resources:
           limits:
