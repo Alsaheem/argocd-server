@@ -14,11 +14,11 @@ spec:
   rules:
   - http:
       paths:
-      - path: /solar(/|$)(.*)
+      - path: /wordle(/|$)(.*)
         pathType: Prefix
         backend:
           service:
-            name: solar-service
+            name: wordle-service
             port:
               number: 80
   - http:

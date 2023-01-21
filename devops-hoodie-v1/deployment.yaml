@@ -91,19 +91,19 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: solar-app
+  name: wordle-app
 spec:
   selector:
     matchLabels:
-      app: solar-app
+      app: wordle-app
   template:
     metadata:
       labels:
-        app: solar-app
+        app: wordle-app
     spec:
       containers:
-      - name: solar-app
-        image: siddharth67/solar-system:v6
+      - name: wordle-app
+        image: xavierh/react-wordle:latest
         ports:
-        - containerPort: 80
+        - containerPort: 3100
 

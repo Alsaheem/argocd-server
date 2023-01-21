@@ -49,10 +49,10 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name:  solar-service
+  name:  wordle-service
 spec:
   selector:
-    app:  solar-app
+    app:  wordle-app
   type:  NodePort
   ports:
   - name:  http
