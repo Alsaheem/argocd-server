@@ -1,34 +1,34 @@
-kind: Service
-apiVersion: v1
-metadata:
-  name:  backend-service-v1
-spec:
-  selector:
-    app:  dummy-backend-v1
-  type:  ClusterIP
-  ports:
-  - name:  http
-    protocol: TCP
-    port:  80
-    targetPort:  5000
+# kind: Service
+# apiVersion: v1
+# metadata:
+#   name:  backend-service-v1
+# spec:
+#   selector:
+#     app:  dummy-backend-v1
+#   type:  ClusterIP
+#   ports:
+#   - name:  http
+#     protocol: TCP
+#     port:  80
+#     targetPort:  5000
 
----
+# ---
 
-kind: Service
-apiVersion: v1
-metadata:
-  name:  backend-service-v2
-spec:
-  selector:
-    app:  dummy-backend-v2
-  type:  ClusterIP
-  ports:
-  - name:  http
-    protocol: TCP
-    port:  80
-    targetPort:  5000
+# kind: Service
+# apiVersion: v1
+# metadata:
+#   name:  backend-service-v2
+# spec:
+#   selector:
+#     app:  dummy-backend-v2
+#   type:  ClusterIP
+#   ports:
+#   - name:  http
+#     protocol: TCP
+#     port:  80
+#     targetPort:  5000
 
----
+# ---
 
 kind: Service
 apiVersion: v1
@@ -42,6 +42,6 @@ spec:
   - name:  http
     protocol: TCP
     port:  80
-    targetPort:  3000
+    targetPort:  80
 
----
+# ---
