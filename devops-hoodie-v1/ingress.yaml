@@ -8,7 +8,7 @@ metadata:
 spec:
   defaultBackend:
     service:
-      name: frontend-service
+      name: solar-system-service
       port:
         number: 80
   # rules:
@@ -19,14 +19,5 @@ spec:
   #       backend:
   #         service:
   #           name: backend-service-v1
-  #           port:
-  #             number: 80
-  # - http:
-  #     paths:
-  #     - path: /backend/v2(/|$)(.*)
-  #       pathType: Prefix
-  #       backend:
-  #         service:
-  #           name: backend-service-v2
   #           port:
   #             number: 80

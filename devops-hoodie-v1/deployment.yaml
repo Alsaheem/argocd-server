@@ -1,94 +1,22 @@
-# apiVersion: apps/v1
-# kind: Deployment
-# metadata:
-#   name: dummy-backend-v1
-# spec:
-#   selector:
-#     matchLabels:
-#       app: dummy-backend-v1
-#   template:
-#     metadata:
-#       labels:
-#         app: dummy-backend-v1
-#     spec:
-#       containers:
-#       - name: dummy-backend-v1
-#         image: alsaheem/dummy-backend:v1
-#         env:
-#           - name: MY_URL
-#             value: http://www.facebook.com
-#           - name:  DB_USERNAME
-#             valueFrom:
-#               secretKeyRef:
-#                 name:  db-creds
-#                 key:  username
-#           - name:  DB_PASSWORD
-#             valueFrom:
-#               secretKeyRef:
-#                 name:  db-creds
-#                 key:  password
-#         resources:
-#           limits:
-#             memory: "128Mi"
-#             cpu: "400m"
-#         ports:
-#         - containerPort: 5000
-
-# ---
-
-# apiVersion: apps/v1
-# kind: Deployment
-# metadata:
-#   name: dummy-backend-v2
-# spec:
-#   selector:
-#     matchLabels:
-#       app: dummy-backend-v2
-#   template:
-#     metadata:
-#       labels:
-#         app: dummy-backend-v2
-#     spec:
-#       containers:
-#       - name: dummy-backend-v2
-#         image: alsaheem/dummy-backend:v2
-#         env:
-#           - name:  DB_USERNAME
-#             valueFrom:
-#               secretKeyRef:
-#                 name:  db-creds
-#                 key:  username
-#           - name:  DB_PASSWORD
-#             valueFrom:
-#               secretKeyRef:
-#                 name:  db-creds
-#                 key:  password
-#         resources:
-#           limits:
-#             memory: "128Mi"
-#             cpu: "400m"
-#         ports:
-#         - containerPort: 5000
-# ---
 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dummy-frontend
+  name: solar-system
 spec:
   selector:
     matchLabels:
-      app: dummy-frontend
+      app: solar-system
   template:
     metadata:
       labels:
-        app: dummy-frontend
+        app: solar-system
     spec:
       containers:
-      - name: dummy-frontend
+      - name: solar-system
         image: siddharth67/solar-system:v6
         ports:
         - containerPort: 80
-# ---
+
 
 
