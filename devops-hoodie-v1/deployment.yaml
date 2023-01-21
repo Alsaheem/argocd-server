@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dummy-backend-v1
-  # namespace: dev
 spec:
   selector:
     matchLabels:
@@ -41,7 +40,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dummy-backend-v2
-  # namespace: dev
 spec:
   selector:
     matchLabels:
@@ -77,7 +75,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dummy-frontend
-  # namespace: dev
 spec:
   selector:
     matchLabels:
@@ -101,5 +98,29 @@ spec:
             value: /backend/v1
         ports:
         - containerPort: 3000
+---
 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: solar-app
+spec:
+  selector:
+    matchLabels:
+      app: solar-app
+  template:
+    metadata:
+      labels:
+        app: solar-app
+    spec:
+      containers:
+      - name: solar-app
+        image: siddhart67/solar-system
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
 
