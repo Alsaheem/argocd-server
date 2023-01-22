@@ -83,7 +83,7 @@ spec:
           - name: GET_HOSTS_FROM
             value: dns
           - name:  REACT_APP_BACKEND_HOST
-            value: /backend/v2
+            value: /backend/v1
         ports:
         - containerPort: 3000
 ---
