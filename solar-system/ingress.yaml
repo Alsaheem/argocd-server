@@ -11,13 +11,3 @@ spec:
       name: solar-system-service
       port:
         number: 80
-  # rules:
-  # - http:
-  #     paths:
-  #     - path: /backend/v1(/|$)(.*)
-  #       pathType: Prefix
-  #       backend:
-  #         service:
-  #           name: backend-service-v1
-  #           port:
-  #             number: 80
